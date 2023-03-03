@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #333;
+}
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+/*CONTAINER*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*INTRO*/
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /*высота по размеру дисплея*/
+    background: url("../images/intro.jpg") center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.intro__title{
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase; /*все большое*/
+    text-align: center;/* по центру*/
+    line-height: 1.1;
+    color: #fff;
+}
+.intro__title:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto 0;
+
+    background-color: #fff;
+
+}
+.intro__inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto ;/*выравниваем по центру*/
+}
+.intro__suptitle{
+    margin-bottom: 20px; /*отступ между h1 и h2*/
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;/*взял с сайта шрифтов*/
+    text-align: center;
+}
+/*HEADER шапка*/
+.header{
+    padding-top: 30px;/*Отступ сверху*/
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.header__inner{
+    display: flex; /*выстроились в ряд сущности*/
+    justify-content: space-between; /*сущности расползлись по крайним позициям в контейнере*/
+    align-items: center; /*Выравнивание по горизонтали по центру*/
+}
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+/*NAV*/
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px; /*Ширина между кнопками меню*/
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+.nav__link:after{ /*Создаем псевдоэлемент */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: #fce38a;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+.nav__link:hover {
+    color: #fce38a;
+}
+.nav__link:hover:after {
+    opacity: 1;
+}
